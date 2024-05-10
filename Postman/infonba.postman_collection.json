@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "bd04803c-437c-4d7f-8d1e-6859407b7a12",
+		"name": "infonba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "equipos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/equipos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"equipos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "equipos/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/equipos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"equipos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estadios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/estadios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"estadios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estadios/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/estadios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"estadios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jugadores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/jugadores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"jugadores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jugadores/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/jugadores/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"jugadores",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/partidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"partidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partidos/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/partidos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"partidos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
