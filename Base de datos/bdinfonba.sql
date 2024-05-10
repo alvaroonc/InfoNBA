@@ -49,7 +49,8 @@ CREATE TABLE partidos (
   puntos_local integer,
   puntos_visitante integer,
   FOREIGN KEY (id_equipo_local) REFERENCES equipos(id),
-  FOREIGN KEY (id_equipo_visitante) REFERENCES equipos(id)
+  FOREIGN KEY (id_equipo_visitante) REFERENCES equipos(id),
+  FOREIGN KEY (id_estadio) REFERENCES estadios(id)
 );
 
 INSERT INTO estadios VALUES 
