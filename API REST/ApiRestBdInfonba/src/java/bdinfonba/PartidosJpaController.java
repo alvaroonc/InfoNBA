@@ -4,7 +4,8 @@
  */
 package bdinfonba;
 
-import bdinfonba.exceptions.NonexistentEntityException;
+import apirest.exceptions.NonexistentEntityException;
+import bdinfonba.Partidos;
 import java.io.Serializable;
 import java.util.List;
 import jakarta.persistence.EntityManager;
@@ -34,25 +35,7 @@ public class PartidosJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Equipos idEquipoLocal = partidos.getIdEquipoLocal();
-            if (idEquipoLocal != null) {
-                idEquipoLocal = em.getReference(idEquipoLocal.getClass(), idEquipoLocal.getId());
-                partidos.setIdEquipoLocal(idEquipoLocal);
-            }
-            Equipos idEquipoVisitante = partidos.getIdEquipoVisitante();
-            if (idEquipoVisitante != null) {
-                idEquipoVisitante = em.getReference(idEquipoVisitante.getClass(), idEquipoVisitante.getId());
-                partidos.setIdEquipoVisitante(idEquipoVisitante);
-            }
             em.persist(partidos);
-            if (idEquipoLocal != null) {
-                idEquipoLocal.getPartidosCollection().add(partidos);
-                idEquipoLocal = em.merge(idEquipoLocal);
-            }
-            if (idEquipoVisitante != null) {
-                idEquipoVisitante.getPartidosCollection().add(partidos);
-                idEquipoVisitante = em.merge(idEquipoVisitante);
-            }
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -66,36 +49,7 @@ public class PartidosJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Partidos persistentPartidos = em.find(Partidos.class, partidos.getId());
-            Equipos idEquipoLocalOld = persistentPartidos.getIdEquipoLocal();
-            Equipos idEquipoLocalNew = partidos.getIdEquipoLocal();
-            Equipos idEquipoVisitanteOld = persistentPartidos.getIdEquipoVisitante();
-            Equipos idEquipoVisitanteNew = partidos.getIdEquipoVisitante();
-            if (idEquipoLocalNew != null) {
-                idEquipoLocalNew = em.getReference(idEquipoLocalNew.getClass(), idEquipoLocalNew.getId());
-                partidos.setIdEquipoLocal(idEquipoLocalNew);
-            }
-            if (idEquipoVisitanteNew != null) {
-                idEquipoVisitanteNew = em.getReference(idEquipoVisitanteNew.getClass(), idEquipoVisitanteNew.getId());
-                partidos.setIdEquipoVisitante(idEquipoVisitanteNew);
-            }
             partidos = em.merge(partidos);
-            if (idEquipoLocalOld != null && !idEquipoLocalOld.equals(idEquipoLocalNew)) {
-                idEquipoLocalOld.getPartidosCollection().remove(partidos);
-                idEquipoLocalOld = em.merge(idEquipoLocalOld);
-            }
-            if (idEquipoLocalNew != null && !idEquipoLocalNew.equals(idEquipoLocalOld)) {
-                idEquipoLocalNew.getPartidosCollection().add(partidos);
-                idEquipoLocalNew = em.merge(idEquipoLocalNew);
-            }
-            if (idEquipoVisitanteOld != null && !idEquipoVisitanteOld.equals(idEquipoVisitanteNew)) {
-                idEquipoVisitanteOld.getPartidosCollection().remove(partidos);
-                idEquipoVisitanteOld = em.merge(idEquipoVisitanteOld);
-            }
-            if (idEquipoVisitanteNew != null && !idEquipoVisitanteNew.equals(idEquipoVisitanteOld)) {
-                idEquipoVisitanteNew.getPartidosCollection().add(partidos);
-                idEquipoVisitanteNew = em.merge(idEquipoVisitanteNew);
-            }
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
@@ -124,16 +78,6 @@ public class PartidosJpaController implements Serializable {
                 partidos.getId();
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The partidos with id " + id + " no longer exists.", enfe);
-            }
-            Equipos idEquipoLocal = partidos.getIdEquipoLocal();
-            if (idEquipoLocal != null) {
-                idEquipoLocal.getPartidosCollection().remove(partidos);
-                idEquipoLocal = em.merge(idEquipoLocal);
-            }
-            Equipos idEquipoVisitante = partidos.getIdEquipoVisitante();
-            if (idEquipoVisitante != null) {
-                idEquipoVisitante.getPartidosCollection().remove(partidos);
-                idEquipoVisitante = em.merge(idEquipoVisitante);
             }
             em.remove(partidos);
             em.getTransaction().commit();

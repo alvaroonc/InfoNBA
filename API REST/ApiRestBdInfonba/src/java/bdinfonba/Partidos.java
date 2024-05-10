@@ -18,7 +18,6 @@ import jakarta.persistence.Table;
 @NamedQueries({
     @NamedQuery(name = "Partidos.findAll", query = "SELECT p FROM Partidos p"),
     @NamedQuery(name = "Partidos.findById", query = "SELECT p FROM Partidos p WHERE p.id = :id"),
-    @NamedQuery(name = "Partidos.findByIdEstadio", query = "SELECT p FROM Partidos p WHERE p.idEstadio = :idEstadio"),
     @NamedQuery(name = "Partidos.findByPuntosLocal", query = "SELECT p FROM Partidos p WHERE p.puntosLocal = :puntosLocal"),
     @NamedQuery(name = "Partidos.findByPuntosVisitante", query = "SELECT p FROM Partidos p WHERE p.puntosVisitante = :puntosVisitante")})
 public class Partidos implements Serializable {
@@ -29,8 +28,6 @@ public class Partidos implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "id_estadio")
-    private Integer idEstadio;
     @Column(name = "puntos_local")
     private Integer puntosLocal;
     @Column(name = "puntos_visitante")
@@ -41,6 +38,9 @@ public class Partidos implements Serializable {
     @JoinColumn(name = "id_equipo_visitante", referencedColumnName = "id")
     @ManyToOne
     private Equipos idEquipoVisitante;
+    @JoinColumn(name = "id_estadio", referencedColumnName = "id")
+    @ManyToOne
+    private Estadios idEstadio;
 
     public Partidos() {
     }
@@ -55,14 +55,6 @@ public class Partidos implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getIdEstadio() {
-        return idEstadio;
-    }
-
-    public void setIdEstadio(Integer idEstadio) {
-        this.idEstadio = idEstadio;
     }
 
     public Integer getPuntosLocal() {
@@ -95,6 +87,14 @@ public class Partidos implements Serializable {
 
     public void setIdEquipoVisitante(Equipos idEquipoVisitante) {
         this.idEquipoVisitante = idEquipoVisitante;
+    }
+
+    public Estadios getIdEstadio() {
+        return idEstadio;
+    }
+
+    public void setIdEstadio(Estadios idEstadio) {
+        this.idEstadio = idEstadio;
     }
 
     @Override

@@ -4,8 +4,10 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>bdinfonba.Equipos</class>
     <class>bdinfonba.Estadios</class>
-    <class>bdinfonba.Partidos</class>
     <class>bdinfonba.Jugadores</class>
+    <class>bdinfonba.Estadios_1</class>
+    <class>bdinfonba.Equipos_1</class>
+    <class>bdinfonba.Partidos</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bdinfonba?zeroDateTimeBehavior=CONVERT_TO_NULL&amp;autoReconnect=true&amp;useSSL=false&amp;serverTimezone=UTC "/>
