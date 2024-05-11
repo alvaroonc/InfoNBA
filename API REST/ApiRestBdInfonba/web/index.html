@@ -1,15 +1,234 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
+     <head>
+        <title>API Rest InfoNBA</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table {
+                border:1px solid black;
+                border-collapse:collapse;                
+            }
+            table td,
+            table th {
+                border:1px solid black;
+                padding:5px 10px;
+            }
+            table th {
+                background-color:orange;
+            }
+            .cabecera {
+                font-weight: bold;
+                background-color:#dddddd;
+            }
+            .rotulo {
+                font-weight: bold;
+                background-color:#f2deac;
+            }
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
+        <h1>API Rest InfoNBA</h1>       
+        <table>
+            <tr>
+                <td class="rotulo">Database</td>
+                <td>infonba</td>
+            </tr>                
+            <tr>
+                <td class="rotulo">Table</td>
+                <td>equipos</td>
+            </tr>  
+            <tr>
+                <td class="rotulo">Content-Type</td>
+                <td>
+                    application/json
+                </td>
+            </tr>  
+            <tr>
+                <td class="rotulo">Accept</td>
+                <td>
+                    application/json
+                </td>
+            </tr>  
+        </table>
+
+         <br><br> 
+
+        <table>
+            <tr>
+                <th>MÉTODO</th>
+                <th>PATH</th>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td>
+                    <a href="/bdinfonba/infonba/equipos">
+                        /bdinfonba/infonba/equipos
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td>/bdinfonba/infonba/equipos/{id}
+                    <br>
+                    <a href="/bdinfonba/infonba/equipos/1">
+                        /bdinfonba/infonba/equipos/1
+                    </a>
+                
+                </td>
+            </tr>                       
+        </table>
+         
+         <br><br>
+         <table>
+            <tr>
+                <td class="rotulo">Database</td>
+                <td>infonba</td>
+            </tr>                
+            <tr>
+                <td class="rotulo">Table</td>
+                <td>estadios</td>
+            </tr>  
+            <tr>
+                <td class="rotulo">Content-Type</td>
+                <td>
+                    application/json
+                </td>
+            </tr>  
+            <tr>
+                <td class="rotulo">Accept</td>
+                <td>
+                    application/json
+                </td>
+            </tr>  
+        </table>
+
+         <br><br> 
+
+        <table>
+            <tr>
+                <th>MÉTODO</th>
+                <th>PATH</th>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td>
+                    <a href="/bdinfonba/infonba/estadios">
+                        /bdinfonba/infonba/estadios
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td>/bdinfonba/infonba/estadios/{id}
+                    <br>
+                    <a href="/bdinfonba/infonba/estadios/1">
+                        /bdinfonba/infonba/estadios/1
+                    </a>
+                
+                </td>
+            </tr>                       
+        </table>
+         <br><br>
+         
+         <table>
+            <tr>
+                <td class="rotulo">Database</td>
+                <td>infonba</td>
+            </tr>                
+            <tr>
+                <td class="rotulo">Table</td>
+                <td>jugadores</td>
+            </tr>  
+            <tr>
+                <td class="rotulo">Content-Type</td>
+                <td>
+                    application/json
+                </td>
+            </tr>  
+            <tr>
+                <td class="rotulo">Accept</td>
+                <td>
+                    application/json
+                </td>
+            </tr>  
+        </table>
+
+         <br><br> 
+
+        <table>
+            <tr>
+                <th>MÉTODO</th>
+                <th>PATH</th>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td>
+                    <a href="/bdinfonba/infonba/jugadores">
+                        /bdinfonba/infonba/jugadores
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td>/bdinfonba/infonba/jugadores/{id}
+                    <br>
+                    <a href="/bdinfonba/infonba/jugadores/1">
+                        /bdinfonba/infonba/jugadores/1
+                    </a>
+                
+                </td>
+            </tr>                       
+        </table>
+         <br><br>
+         <table>
+            <tr>
+                <td class="rotulo">Database</td>
+                <td>infonba</td>
+            </tr>                
+            <tr>
+                <td class="rotulo">Table</td>
+                <td>partidos</td>
+            </tr>  
+            <tr>
+                <td class="rotulo">Content-Type</td>
+                <td>
+                    application/json
+                </td>
+            </tr>  
+            <tr>
+                <td class="rotulo">Accept</td>
+                <td>
+                    application/json
+                </td>
+            </tr>  
+        </table>
+
+         <br><br> 
+
+        <table>
+            <tr>
+                <th>MÉTODO</th>
+                <th>PATH</th>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td>
+                    <a href="/bdinfonba/infonba/partidos">
+                        /bdinfonba/infonba/partidos
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td>/bdinfonba/infonba/partidos/{id}
+                    <br>
+                    <a href="/bdinfonba/infonba/partidos/1">
+                        /bdinfonba/infonba/partidos/1
+                    </a>
+                
+                </td>
+            </tr>                       
+        </table>
     </body>
 </html>
