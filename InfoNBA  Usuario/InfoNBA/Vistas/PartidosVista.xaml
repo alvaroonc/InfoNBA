@@ -1,0 +1,96 @@
+﻿<Page x:Class="InfoNBA.Vistas.PartidosVista"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InfoNBA.Vistas"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="PartidosVista">
+
+    <Border CornerRadius="8" Background="White">
+        <Grid Margin="10">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Path=ListaPartidos}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderThickness="3" CornerRadius="8" Width="1000" Height="150" Margin="10">
+                                <Border.BorderBrush>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#1d428a" Offset="0"/>
+                                        <GradientStop Color="#c8102e" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.BorderBrush>
+
+                                <Grid Margin="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.2*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=Estadio.Nombre}" FontSize="15"/>
+
+                                    <Grid Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.8*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0.7*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0.8*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Grid.Column="0" Source="{Binding Path=EquipoLocal.Logo}" Height="100" Width="150"/>
+
+                                        <Border Grid.Column="1">
+                                            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Vertical" Margin="5">
+                                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Path=EquipoLocal.Nombre}" VerticalAlignment="Center" FontSize="25" FontWeight="Bold"/>
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                                    <TextBlock Text="Conferencia "/>
+                                                    <TextBlock Text="{Binding Path=EquipoLocal.Conferencia}"/>
+                                                    <TextBlock Text=" |  "/>
+                                                    <TextBlock Text="{Binding Path=EquipoLocal.Victorias}"/>
+                                                    <TextBlock Text=" V"/>
+                                                    <TextBlock Text=" |  "/>
+                                                    <TextBlock Text="{Binding Path=EquipoLocal.Derrotas}"/>
+                                                    <TextBlock Text=" D"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </Border>
+
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <TextBlock Text="{Binding Path=PuntosLocal}" FontSize="20"/>
+                                            <TextBlock Text=" - " FontSize="20"/>
+                                            <TextBlock Text="{Binding Path=PuntosVisitante}" FontSize="20"/>
+                                        </StackPanel>
+
+                                        <Image Grid.Column="4" Source="{Binding Path=EquipoVisitante.Logo}" Height="100" Width="150"/>
+
+                                        <Border Grid.Column="3">
+                                            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Vertical" Margin="5">
+                                                <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="{Binding Path=EquipoVisitante.Nombre}" VerticalAlignment="Center" FontSize="25" FontWeight="Bold"/>
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                                    <TextBlock Text="Conferencia "/>
+                                                    <TextBlock Text="{Binding Path=EquipoVisitante.Conferencia}"/>
+                                                    <TextBlock Text=" |  "/>
+                                                    <TextBlock Text="{Binding Path=EquipoVisitante.Victorias}"/>
+                                                    <TextBlock Text=" V"/>
+                                                    <TextBlock Text=" |  "/>
+                                                    <TextBlock Text="{Binding Path=EquipoVisitante.Derrotas}"/>
+                                                    <TextBlock Text=" D"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </Border>
+
+                                    </Grid>
+
+                                </Grid>
+
+
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</Page>

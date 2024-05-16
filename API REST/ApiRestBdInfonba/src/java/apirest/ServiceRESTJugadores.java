@@ -55,7 +55,7 @@ public class ServiceRESTJugadores {
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getOne(@PathParam("id") String id) {
+    public Response getOne(@PathParam("id") int id) {
         EntityManagerFactory emf = null;
         HashMap<String, String> mensaje = new HashMap<>();
         Response response;
@@ -65,7 +65,7 @@ public class ServiceRESTJugadores {
         try {
             emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
             JugadoresJpaController dao = new JugadoresJpaController(emf);
-            jug = dao.findJugadores(Integer.parseInt(id));
+            jug = dao.findJugadores(id);
 
             if (jug == null) {
                 statusResul = Response.Status.NOT_FOUND;

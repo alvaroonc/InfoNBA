@@ -55,7 +55,7 @@ public class ServiceRESTPartidos {
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getOne(@PathParam("id") String id) {
+    public Response getOne(@PathParam("id") int id) {
         EntityManagerFactory emf = null;
         HashMap<String, String> mensaje = new HashMap<>();
         Response response;
@@ -65,7 +65,7 @@ public class ServiceRESTPartidos {
         try {
             emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
             PartidosJpaController dao = new PartidosJpaController(emf);
-            partido = dao.findPartidos(Integer.parseInt(id));
+            partido = dao.findPartidos(id);
 
             if (partido == null) {
                 statusResul = Response.Status.NOT_FOUND;

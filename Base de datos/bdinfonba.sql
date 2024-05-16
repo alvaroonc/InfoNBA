@@ -1,5 +1,5 @@
-create database if not exists bdinfoNBA;
-use bdinfoNBA;
+create database if not exists bdinfonba;
+use bdinfonba;
 
 CREATE TABLE estadios (
   id integer PRIMARY KEY AUTO_INCREMENT,
@@ -85,36 +85,36 @@ INSERT INTO estadios VALUES
 (0,'Golden One Center',17500,'Sacramento','https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Golden_1_Center_2017.jpg/480px-Golden_1_Center_2017.jpg');
 
 INSERT INTO equipos VALUES 
-(0,'Atlanta Hawks',1,'Quin Snyder',1949,'Atlanta','https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg','#E03A3E','Este',36,46,6),
-(0,'Boston Celtics',17,'Joe Mazzulla',1946,'Boston','https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg','#007A33','Este',64,18,1),
-(0,'Brooklyn Nets',0,'Jacque Vaughn',1967,'Brooklyn, Nueva York','https://cdn.nba.com/logos/nba/1610612751/primary/L/logo.svg','#000000','Este',32,50,2),
-(0,'Charlotte Hornets',0,'Steve Clifford',1988,'Charlotte','https://cdn.nba.com/logos/nba/1610612766/primary/L/logo.svg','#00788C','Este',21,61,7),
-(0,'Chicago Bulls',6,'Billy Donovan',1966,'Chicago','https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg','#CE1141','Este',39,43,11),
-(0,'Cleveland Cavaliers',1,'J. Bickerstaff',1970,'Cleveland','https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg','#860038','Este',48,34,12),
-(0,'Dallas Mavericks',1,'Jason Kidd',1980,'Dallas','https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg','#00538C','Oeste',50,32,16),
-(0,'Denver Nuggets',1,'Michael Malone',1976,'Denver','https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg','#0E2240','Oeste',57,25,21),
-(0,'Detroit Pistons',3,'Monty Williams',1941,'Detroit','https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg','#1D42BA','Este',14,68,13),
-(0,'Golden State Warriors',7,'Steve Kerr',1946,'San Francisco','https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg','#1D428A','Oeste',46,36,26),
-(0,'Houston Rockets',2,'Ime Udoka',1967,'Houston','https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg','#CE1141','Oeste',41,41,17),
-(0,'Indiana Pacers',0,'Rick Carlisle',1967,'Indianapolis','https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg','#002D62','Este',47,35,14),
-(0,'Los Angeles Clippers',0,'Tyronn Lue',1970,'Los Angeles','https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg','#C8102E','Oeste',51,31,27),
-(0,'Los Angeles Lakers',17,'Darvin Ham',1948,'Los Angeles','https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg','#552583','Oeste',47,35,27),
-(0,'Memphis Grizzlies',0,'Taylor Jenkins',1995,'Memphis','https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg','#5D76A9','Oeste',27,55,18),
-(0,'Miami Heat',3,'Erik Spoelstra',1988,'Miami','https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg','#000000','Este',46,36,8),
-(0,'Milwaukee Bucks',2,'Doc Rivers',1968,'Milwaukee','https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg','#00471B','Este',49,33,15),
-(0,'Minnesota Timberwolves',0,'Chris Finch',1989,'Minneapolis','https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg','#0C2340','Oeste',56,26,22),
-(0,'New Orleans Pelicans',0,'Willie Green',2002,'Nueva Orleans','https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg','#0C2340','Oeste',49,33,19),
-(0,'New York Knicks',2,'Tom Thibodeau',1946,'Nueva York','https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg','#006BB6','Este',50,32,3),
-(0,'Oklahoma City Thunder',1,'Mark Daigneault',1967,'Oklahoma City','https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg','#007AC1','Oeste',57,25,24),
-(0,'Orlando Magic',0,'Jamahl Mosley',1989,'Orlando','https://cdn.nba.com/logos/nba/1610612753/primary/L/logo.svg','#0077C0','Este',47,35,9),
-(0,'Philadelphia 76ers',3,'Nick Nurse',1949,'Filadelfia','https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg','#006BB6','Este',47,35,4),
-(0,'Phoenix Suns',0,'Frank Vogel',1968,'Phoenix','https://cdn.nba.com/logos/nba/1610612756/primary/L/logo.svg','#1D1160','Oeste',49,33,28),
-(0,'Portland Trail Blazers',1,'C. Billups',1970,'Portland','https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg','#E03A3E','Oeste',21,61,23),
-(0,'Sacramento Kings',1,'Mike Brown',1948,'Sacramento','https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg','#5A2D81','Oeste',46,36,29),
-(0,'San Antonio Spurs',5,'Gregg Popovich',1976,'San Antonio','https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg','#C4CED4','Oeste',22,60,20),
-(0,'Toronto Raptors',1,'Darko Rajakovic',1995,'Toronto','https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg','#CE1141','Este',25,57,5),
-(0,'Utah Jazz',0,'Will Hardy',1974,'Salt Lake  City','https://cdn.nba.com/logos/nba/1610612762/primary/L/logo.svg','#002B5C','Oeste',31,51,25),
-(0,'Washington Wizards',1,'Brian Keefe',1961,'Washington D.C.','https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg','#E31837','Este',15,67,10);
+(0,'Atlanta Hawks',1,'Quin Snyder',1949,'Atlanta','https://content.sportslogos.net/logos/6/220/full/8190_atlanta_hawks-primary-2021.png','#E03A3E','Este',36,46,6),
+(0,'Boston Celtics',17,'Joe Mazzulla',1946,'Boston','https://content.sportslogos.net/logos/6/213/full/boston_celtics_logo_primary_19977628.png','#007A33','Este',64,18,1),
+(0,'Brooklyn Nets',0,'Jacque Vaughn',1967,'Brooklyn, Nueva York','https://content.sportslogos.net/logos/6/3786/full/brooklyn_nets_logo_primary_20135043.png','#777D84','Este',32,50,2),
+(0,'Charlotte Hornets',0,'Steve Clifford',1988,'Charlotte','https://content.sportslogos.net/logos/6/5120/thumbs/512019262015.gif','#00788C','Este',21,61,7),
+(0,'Chicago Bulls',6,'Billy Donovan',1966,'Chicago','https://content.sportslogos.net/logos/6/221/full/chicago_bulls_logo_primary_19672598.png','#CE1141','Este',39,43,11),
+(0,'Cleveland Cavaliers',1,'J. Bickerstaff',1970,'Cleveland','https://content.sportslogos.net/logos/6/222/full/cleveland_cavaliers_logo_primary_2023_sportslogosnet-5369.png','#860038','Este',48,34,12),
+(0,'Dallas Mavericks',1,'Jason Kidd',1980,'Dallas','https://content.sportslogos.net/logos/6/228/full/3463_dallas_mavericks-primary-2018.png','#00538C','Oeste',50,32,16),
+(0,'Denver Nuggets',1,'Michael Malone',1976,'Denver','https://content.sportslogos.net/logos/6/229/full/8926_denver_nuggets-primary-2019.png','#FEC524','Oeste',57,25,21),
+(0,'Detroit Pistons',3,'Monty Williams',1941,'Detroit','https://content.sportslogos.net/logos/6/223/full/detroit_pistons_logo_primary_20185710.png','#C8102E','Este',14,68,13),
+(0,'Golden State Warriors',7,'Steve Kerr',1946,'San Francisco','https://content.sportslogos.net/logos/6/235/full/3152_golden_state_warriors-primary-2020.png','#1D428A','Oeste',46,36,26),
+(0,'Houston Rockets',2,'Ime Udoka',1967,'Houston','https://content.sportslogos.net/logos/6/230/full/6830_houston_rockets-primary-2020.png','#CE1141','Oeste',41,41,17),
+(0,'Indiana Pacers',0,'Rick Carlisle',1967,'Indianapolis','https://content.sportslogos.net/logos/6/224/full/4812_indiana_pacers-primary-2018.png','#002D62','Este',47,35,14),
+(0,'Los Angeles Clippers',0,'Tyronn Lue',1970,'Los Angeles','https://content.sportslogos.net/logos/6/236/full/los_angeles_clippers_logo_primary_2025_sportslogosnet-5542.png','#C8102E','Oeste',51,31,27),
+(0,'Los Angeles Lakers',17,'Darvin Ham',1948,'Los Angeles','https://content.sportslogos.net/logos/6/237/full/los_angeles_lakers_logo_primary_2024_sportslogosnet-7324.png','#FDB927','Oeste',47,35,27),
+(0,'Memphis Grizzlies',0,'Taylor Jenkins',1995,'Memphis','https://content.sportslogos.net/logos/6/231/full/4373_memphis_grizzlies-primary-2019.png','#5D76A9','Oeste',27,55,18),
+(0,'Miami Heat',3,'Erik Spoelstra',1988,'Miami','https://content.sportslogos.net/logos/6/214/full/burm5gh2wvjti3xhei5h16k8e.gif','#98002E','Este',46,36,8),
+(0,'Milwaukee Bucks',2,'Doc Rivers',1968,'Milwaukee','https://content.sportslogos.net/logos/6/225/full/milwaukee_bucks_logo_primary_20165763.png','#EEE1C6','Este',49,33,15),
+(0,'Minnesota Timberwolves',0,'Chris Finch',1989,'Minneapolis','https://content.sportslogos.net/logos/6/232/full/9669_minnesota_timberwolves-primary-2018.png','#236192','Oeste',56,26,22),
+(0,'New Orleans Pelicans',0,'Willie Green',2002,'Nueva Orleans','https://content.sportslogos.net/logos/6/4962/full/new_orleans_pelicans_logo_primary_2024_sportslogosnet-9292.png','#85714D','Oeste',49,33,19),
+(0,'New York Knicks',2,'Tom Thibodeau',1946,'Nueva York','https://content.sportslogos.net/logos/6/216/full/new_york_knicks_logo_primary_2024_sportslogosnet-7170.png','#F58426','Este',50,32,3),
+(0,'Oklahoma City Thunder',1,'Mark Daigneault',1967,'Oklahoma City','https://content.sportslogos.net/logos/6/2687/full/khmovcnezy06c3nm05ccn0oj2.png','#007AC1','Oeste',57,25,24),
+(0,'Orlando Magic',0,'Jamahl Mosley',1989,'Orlando','https://content.sportslogos.net/logos/6/217/full/orlando_magic_logo_primary_20117178.png','#0077C0','Este',47,35,9),
+(0,'Philadelphia 76ers',3,'Nick Nurse',1949,'Filadelfia','https://content.sportslogos.net/logos/6/218/full/7034_philadelphia_76ers-primary-2016.png','#006BB6','Este',47,35,4),
+(0,'Phoenix Suns',0,'Frank Vogel',1968,'Phoenix','https://content.sportslogos.net/logos/6/238/full/phoenix_suns_logo_primary_20143696.png','#E56020','Oeste',49,33,28),
+(0,'Portland Trail Blazers',1,'C. Billups',1970,'Portland','https://content.sportslogos.net/logos/6/239/full/9725_portland_trail_blazers-primary-2018.png','#E03A3E','Oeste',21,61,23),
+(0,'Sacramento Kings',1,'Mike Brown',1948,'Sacramento','https://content.sportslogos.net/logos/6/240/full/4043_sacramento_kings-primary-2017.png','#5A2D81','Oeste',46,36,29),
+(0,'San Antonio Spurs',5,'Gregg Popovich',1976,'San Antonio','https://content.sportslogos.net/logos/6/233/full/2547_san_antonio_spurs-primary-2018.png','#C4CED4','Oeste',22,60,20),
+(0,'Toronto Raptors',1,'Darko Rajakovic',1995,'Toronto','https://content.sportslogos.net/logos/6/227/full/7024_toronto_raptors-primary-2021.png','#CE1141','Este',25,57,5),
+(0,'Utah Jazz',0,'Will Hardy',1974,'Salt Lake  City','https://content.sportslogos.net/logos/6/234/full/utah_jazz_logo_primary_2023_sportslogosnet-8513.png','#F9A01B','Oeste',31,51,25),
+(0,'Washington Wizards',1,'Brian Keefe',1961,'Washington D.C.','https://content.sportslogos.net/logos/6/219/full/5671_washington_wizards-primary-2016.png','#E31837','Este',15,67,10);
 
 insert into jugadores values
 (0,1,'Trae','Young','Base',185,74,11,54,25,11,3),

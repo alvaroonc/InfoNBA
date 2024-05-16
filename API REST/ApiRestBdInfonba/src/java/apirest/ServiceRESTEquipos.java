@@ -2,8 +2,10 @@ package apirest;
 
 import bdinfonba.Equipos;
 import bdinfonba.EquiposJpaController;
+import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.Query;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
@@ -13,6 +15,9 @@ import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
 import java.util.HashMap;
 import java.util.List;
+import org.eclipse.yasson.internal.JsonBindingBuilder;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 @Path("equipos")
 public class ServiceRESTEquipos {
@@ -55,7 +60,7 @@ public class ServiceRESTEquipos {
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getOne(@PathParam("id") String id) {
+    public Response getOne(@PathParam("id") int id) {
         EntityManagerFactory emf = null;
         HashMap<String, String> mensaje = new HashMap<>();
         Response response;
@@ -64,7 +69,7 @@ public class ServiceRESTEquipos {
         try {
             emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
             EquiposJpaController dao = new EquiposJpaController(emf);
-            equipo = dao.findEquipos(Integer.parseInt(id));
+            equipo = dao.findEquipos(id);
 
             if (equipo == null) {
                 statusResul = Response.Status.NOT_FOUND;
