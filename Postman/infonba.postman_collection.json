@@ -9,7 +9,13 @@
 			"name": "equipos",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/bdinfonba/infonba/equipos",
 					"protocol": "http",
@@ -30,7 +36,13 @@
 			"name": "equipos/id",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/bdinfonba/infonba/equipos/1",
 					"protocol": "http",
@@ -52,7 +64,13 @@
 			"name": "estadios",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/bdinfonba/infonba/estadios",
 					"protocol": "http",
@@ -73,7 +91,13 @@
 			"name": "estadios/id",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/bdinfonba/infonba/estadios/1",
 					"protocol": "http",
@@ -95,7 +119,13 @@
 			"name": "jugadores",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/bdinfonba/infonba/jugadores",
 					"protocol": "http",
@@ -116,7 +146,13 @@
 			"name": "jugadores/id",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/bdinfonba/infonba/jugadores/1",
 					"protocol": "http",
@@ -138,7 +174,13 @@
 			"name": "partidos",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/bdinfonba/infonba/partidos",
 					"protocol": "http",
@@ -159,7 +201,13 @@
 			"name": "partidos/id",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/bdinfonba/infonba/partidos/1",
 					"protocol": "http",
@@ -172,6 +220,464 @@
 						"infonba",
 						"partidos",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "equipos/clasificacion/este",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/equipos/clasificacion/este",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"equipos",
+						"clasificacion",
+						"este"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "equipos/clasificacion/oeste",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/equipos/clasificacion/oeste",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"equipos",
+						"clasificacion",
+						"oeste"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "equipos",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"campeonatos\": 1,\r\n    \"ciudad\": \"Atlanta\",\r\n    \"colorPrincipal\": \"#E03A3E\",\r\n    \"conferencia\": \"Este\",\r\n    \"derrotas\": 46,\r\n    \"entrenador\": \"Quin Snyder\",\r\n    \"fundacion\": \"1949\",\r\n    \"id\": 1,\r\n    \"idEstadio\": {\r\n        \"capacidad\": 18750,\r\n        \"ciudad\": \"Atlanta\",\r\n        \"id\": 6,\r\n        \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Philips_Arena.jpg/480px-Philips_Arena.jpg\",\r\n        \"nombre\": \"State Farm Arena\"\r\n    },\r\n    \"logo\": \"https://content.sportslogos.net/logos/6/220/full/8190_atlanta_hawks-primary-2021.png\",\r\n    \"nombre\": \"Atlanta Hawks\",\r\n    \"victorias\": 36\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/equipos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"equipos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "equipos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"campeonatos\": 1,\r\n    \"ciudad\": \"Atlanta\",\r\n    \"colorPrincipal\": \"#E03A3E\",\r\n    \"conferencia\": \"Este\",\r\n    \"derrotas\": 46,\r\n    \"entrenador\": \"Quin Snyder\",\r\n    \"fundacion\": \"1949\",\r\n    \"id\": 0,\r\n    \"idEstadio\": {\r\n        \"capacidad\": 18750,\r\n        \"ciudad\": \"Atlanta\",\r\n        \"id\": 6,\r\n        \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Philips_Arena.jpg/480px-Philips_Arena.jpg\",\r\n        \"nombre\": \"State Farm Arena\"\r\n    },\r\n    \"logo\": \"https://content.sportslogos.net/logos/6/220/full/8190_atlanta_hawks-primary-2021.png\",\r\n    \"nombre\": \"Atlanta Hawks\",\r\n    \"victorias\": 36\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/equipos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"equipos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "equipos/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/equipos/31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"equipos",
+						"31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estadios",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"capacidad\": 18624,\r\n    \"ciudad\": \"Boston\",\r\n    \"id\": 1,\r\n    \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/TD_Garden_%28crop%29.JPG/480px-TD_Garden_%28crop%29.JPG\",\r\n    \"nombre\": \"TD Garden\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/estadios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"estadios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estadios",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"capacidad\": 18624,\r\n    \"ciudad\": \"Boston\",\r\n    \"id\": 0,\r\n    \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/TD_Garden_%28crop%29.JPG/480px-TD_Garden_%28crop%29.JPG\",\r\n    \"nombre\": \"TD Garden\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/estadios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"estadios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estadios/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/estadios/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"estadios",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jugadores",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"altura\": 185,\r\n    \"apellido\": \"Young\",\r\n    \"asistencias\": 11,\r\n    \"dorsal\": 11,\r\n    \"id\": 1,\r\n    \"idEquipo\": {\r\n        \"campeonatos\": 1,\r\n        \"ciudad\": \"Atlanta\",\r\n        \"colorPrincipal\": \"#E03A3E\",\r\n        \"conferencia\": \"Este\",\r\n        \"derrotas\": 46,\r\n        \"entrenador\": \"Quin Snyder\",\r\n        \"fundacion\": \"1949\",\r\n        \"id\": 1,\r\n        \"idEstadio\": {\r\n            \"capacidad\": 18750,\r\n            \"ciudad\": \"Atlanta\",\r\n            \"id\": 6,\r\n            \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Philips_Arena.jpg/480px-Philips_Arena.jpg\",\r\n            \"nombre\": \"State Farm Arena\"\r\n        },\r\n        \"logo\": \"https://content.sportslogos.net/logos/6/220/full/8190_atlanta_hawks-primary-2021.png\",\r\n        \"nombre\": \"Atlanta Hawks\",\r\n        \"victorias\": 36\r\n    },\r\n    \"nombre\": \"Trae\",\r\n    \"partidosJugados\": 54,\r\n    \"peso\": 74.00,\r\n    \"posicion\": \"Base\",\r\n    \"puntos\": 25,\r\n    \"rebotes\": 3\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/jugadores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"jugadores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jugadores",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"altura\": 185,\r\n    \"apellido\": \"Young\",\r\n    \"asistencias\": 11,\r\n    \"dorsal\": 11,\r\n    \"id\": 0,\r\n    \"idEquipo\": {\r\n        \"campeonatos\": 1,\r\n        \"ciudad\": \"Atlanta\",\r\n        \"colorPrincipal\": \"#E03A3E\",\r\n        \"conferencia\": \"Este\",\r\n        \"derrotas\": 46,\r\n        \"entrenador\": \"Quin Snyder\",\r\n        \"fundacion\": \"1949\",\r\n        \"id\": 1,\r\n        \"idEstadio\": {\r\n            \"capacidad\": 18750,\r\n            \"ciudad\": \"Atlanta\",\r\n            \"id\": 6,\r\n            \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Philips_Arena.jpg/480px-Philips_Arena.jpg\",\r\n            \"nombre\": \"State Farm Arena\"\r\n        },\r\n        \"logo\": \"https://content.sportslogos.net/logos/6/220/full/8190_atlanta_hawks-primary-2021.png\",\r\n        \"nombre\": \"Atlanta Hawks\",\r\n        \"victorias\": 36\r\n    },\r\n    \"nombre\": \"Trae\",\r\n    \"partidosJugados\": 54,\r\n    \"peso\": 74.00,\r\n    \"posicion\": \"Base\",\r\n    \"puntos\": 25,\r\n    \"rebotes\": 3\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/jugadores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"jugadores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jugadores/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/jugadores/151",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"jugadores",
+						"151"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partidos",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"idEquipoLocal\": {\r\n        \"campeonatos\": 17,\r\n        \"ciudad\": \"Boston\",\r\n        \"colorPrincipal\": \"#007A33\",\r\n        \"conferencia\": \"Este\",\r\n        \"derrotas\": 18,\r\n        \"entrenador\": \"Joe Mazzulla\",\r\n        \"fundacion\": \"1946\",\r\n        \"id\": 2,\r\n        \"idEstadio\": {\r\n            \"capacidad\": 18624,\r\n            \"ciudad\": \"Boston\",\r\n            \"id\": 1,\r\n            \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/TD_Garden_%28crop%29.JPG/480px-TD_Garden_%28crop%29.JPG\",\r\n            \"nombre\": \"TD Garden\"\r\n        },\r\n        \"logo\": \"https://content.sportslogos.net/logos/6/213/full/boston_celtics_logo_primary_19977628.png\",\r\n        \"nombre\": \"Boston Celtics\",\r\n        \"victorias\": 64\r\n    },\r\n    \"idEquipoVisitante\": {\r\n        \"campeonatos\": 1,\r\n        \"ciudad\": \"Toronto\",\r\n        \"colorPrincipal\": \"#CE1141\",\r\n        \"conferencia\": \"Este\",\r\n        \"derrotas\": 57,\r\n        \"entrenador\": \"Darko Rajakovic\",\r\n        \"fundacion\": \"1995\",\r\n        \"id\": 28,\r\n        \"idEstadio\": {\r\n            \"capacidad\": 18800,\r\n            \"ciudad\": \"Toronto\",\r\n            \"id\": 5,\r\n            \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Scotiabank_Arena_-_2018_%28cropped%29.jpg/480px-Scotiabank_Arena_-_2018_%28cropped%29.jpg\",\r\n            \"nombre\": \"Scotiabank Arena\"\r\n        },\r\n        \"logo\": \"https://content.sportslogos.net/logos/6/227/full/7024_toronto_raptors-primary-2021.png\",\r\n        \"nombre\": \"Toronto Raptors\",\r\n        \"victorias\": 25\r\n    },\r\n    \"idEstadio\": {\r\n        \"capacidad\": 18624,\r\n        \"ciudad\": \"Boston\",\r\n        \"id\": 1,\r\n        \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/TD_Garden_%28crop%29.JPG/480px-TD_Garden_%28crop%29.JPG\",\r\n        \"nombre\": \"TD Garden\"\r\n    },\r\n    \"puntosLocal\": 117,\r\n    \"puntosVisitante\": 94\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/partidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"partidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partidos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 0,\r\n    \"idEquipoLocal\": {\r\n        \"campeonatos\": 17,\r\n        \"ciudad\": \"Boston\",\r\n        \"colorPrincipal\": \"#007A33\",\r\n        \"conferencia\": \"Este\",\r\n        \"derrotas\": 18,\r\n        \"entrenador\": \"Joe Mazzulla\",\r\n        \"fundacion\": \"1946\",\r\n        \"id\": 2,\r\n        \"idEstadio\": {\r\n            \"capacidad\": 18624,\r\n            \"ciudad\": \"Boston\",\r\n            \"id\": 1,\r\n            \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/TD_Garden_%28crop%29.JPG/480px-TD_Garden_%28crop%29.JPG\",\r\n            \"nombre\": \"TD Garden\"\r\n        },\r\n        \"logo\": \"https://content.sportslogos.net/logos/6/213/full/boston_celtics_logo_primary_19977628.png\",\r\n        \"nombre\": \"Boston Celtics\",\r\n        \"victorias\": 64\r\n    },\r\n    \"idEquipoVisitante\": {\r\n        \"campeonatos\": 1,\r\n        \"ciudad\": \"Toronto\",\r\n        \"colorPrincipal\": \"#CE1141\",\r\n        \"conferencia\": \"Este\",\r\n        \"derrotas\": 57,\r\n        \"entrenador\": \"Darko Rajakovic\",\r\n        \"fundacion\": \"1995\",\r\n        \"id\": 28,\r\n        \"idEstadio\": {\r\n            \"capacidad\": 18800,\r\n            \"ciudad\": \"Toronto\",\r\n            \"id\": 5,\r\n            \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Scotiabank_Arena_-_2018_%28cropped%29.jpg/480px-Scotiabank_Arena_-_2018_%28cropped%29.jpg\",\r\n            \"nombre\": \"Scotiabank Arena\"\r\n        },\r\n        \"logo\": \"https://content.sportslogos.net/logos/6/227/full/7024_toronto_raptors-primary-2021.png\",\r\n        \"nombre\": \"Toronto Raptors\",\r\n        \"victorias\": 25\r\n    },\r\n    \"idEstadio\": {\r\n        \"capacidad\": 18624,\r\n        \"ciudad\": \"Boston\",\r\n        \"id\": 1,\r\n        \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/TD_Garden_%28crop%29.JPG/480px-TD_Garden_%28crop%29.JPG\",\r\n        \"nombre\": \"TD Garden\"\r\n    },\r\n    \"puntosLocal\": 117,\r\n    \"puntosVisitante\": 94\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/partidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"partidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partidos/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/bdinfonba/infonba/partidos/91",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bdinfonba",
+						"infonba",
+						"partidos",
+						"91"
 					]
 				}
 			},
