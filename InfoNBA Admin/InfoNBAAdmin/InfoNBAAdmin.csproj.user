@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Vistas\CrearEquipoVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\CrearEstadioVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\CrearJugadorVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\CrearPartidoVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\EditarEquipoVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\EditarEstadioVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\EditarJugadorVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\EditarPartidoVsita.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\EliminarEquipoVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\EliminarEstadioVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\EliminarJugadorVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\EliminarPartidoVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\EquiposVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\EstadiosVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\JugadoresVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\PartidosVista.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\CrearEquipoVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\CrearEstadioVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\CrearJugadorVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\CrearPartidoVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\EditarEquipoVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\EditarEstadioVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\EditarJugadorVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\EditarPartidoVsita.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\EliminarEquipoVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\EliminarEstadioVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\EliminarJugadorVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\EliminarPartidoVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\EquiposVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\EstadiosVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\JugadoresVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\PartidosVista.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

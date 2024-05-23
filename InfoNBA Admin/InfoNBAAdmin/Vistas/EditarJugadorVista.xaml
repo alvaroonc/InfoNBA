@@ -1,0 +1,77 @@
+﻿<Page x:Class="InfoNBAAdmin.Vistas.EditarJugadorVista"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InfoNBAAdmin.Vistas"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditarJugadorVista">
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35">
+            <TextBlock Text="Id jugador " VerticalAlignment="Center"/>
+            <ComboBox />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Nombre " VerticalAlignment="Center"/>
+            <TextBox x:Name="NombreTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Apellido " VerticalAlignment="Center"/>
+            <TextBox x:Name="ApellidoTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Posicion " VerticalAlignment="Center"/>
+            <TextBox x:Name="PosicionTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Altura " VerticalAlignment="Center"/>
+            <TextBox x:Name="AlturaTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Peso " VerticalAlignment="Center"/>
+            <TextBox x:Name="PesoTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Dorsal " VerticalAlignment="Center"/>
+            <TextBox x:Name="DorsalTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Partidos jugados " VerticalAlignment="Center"/>
+            <TextBox x:Name="PartidosTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="PPP " VerticalAlignment="Center"/>
+            <TextBox x:Name="PuntosTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="APP " VerticalAlignment="Center"/>
+            <TextBox x:Name="AsistenciasTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="RPP " VerticalAlignment="Center"/>
+            <TextBox x:Name="RebotesTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35">
+            <TextBlock Text="Equipo " VerticalAlignment="Center"/>
+            <ComboBox />
+        </StackPanel>
+        <Button Grid.Row="7" Grid.ColumnSpan="2" Content="Editar Jugador" HorizontalAlignment="Center" Width="200" Margin="10"/>
+    </Grid>
+</Page>

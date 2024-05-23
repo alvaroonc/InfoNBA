@@ -1,0 +1,77 @@
+﻿<Page x:Class="InfoNBAAdmin.Vistas.EditarEquipoVista"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InfoNBAAdmin.Vistas"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditarEquipoVista">
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35">
+            <TextBlock Text="Id equipo " VerticalAlignment="Center"/>
+            <ComboBox />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Nombre " VerticalAlignment="Center"/>
+            <TextBox x:Name="NombreTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Campeonatos " VerticalAlignment="Center"/>
+            <TextBox x:Name="CampeonatosTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Entrenador " VerticalAlignment="Center"/>
+            <TextBox x:Name="EntrenadorTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Fundacion " VerticalAlignment="Center"/>
+            <TextBox x:Name="FundacionTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Ciudad " VerticalAlignment="Center"/>
+            <TextBox x:Name="CiudadTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Logo " VerticalAlignment="Center"/>
+            <TextBox x:Name="LogoTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Color principal " VerticalAlignment="Center"/>
+            <TextBox x:Name="ColorPrincipalTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Conferencia " VerticalAlignment="Center"/>
+            <TextBox x:Name="ConferenciaTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Victorias " VerticalAlignment="Center"/>
+            <TextBox x:Name="VictoriasTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Derrotas " VerticalAlignment="Center"/>
+            <TextBox x:Name="DerrotasTextBox" Height="25" Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35">
+            <TextBlock Text="Estadio " VerticalAlignment="Center"/>
+            <ComboBox />
+        </StackPanel>
+        <Button Grid.Row="7" Grid.ColumnSpan="2" Content="Editar Equipo" HorizontalAlignment="Center" Width="200" Margin="10"/>
+    </Grid>
+</Page>
