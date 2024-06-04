@@ -85,7 +85,7 @@ namespace InfoNBAAdmin.Vistas {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InfoNBAAdmin;V1.0.0.0;component/vistas/crearestadiovista.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InfoNBAAdmin;component/vistas/crearestadiovista.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Vistas\CrearEstadioVista.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

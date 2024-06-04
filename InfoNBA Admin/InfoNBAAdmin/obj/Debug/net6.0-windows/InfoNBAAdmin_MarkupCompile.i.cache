@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Álvaro\source\repos\InfoNBAAdmin\App.xaml
 171924008850
 11984015289
-2710393398
+311815033830
 19749039922
 MainWindow.xaml;Vistas\CrearEquipoVista.xaml;Vistas\CrearEstadioVista.xaml;Vistas\CrearJugadorVista.xaml;Vistas\CrearPartidoVista.xaml;Vistas\EditarEquipoVista.xaml;Vistas\EditarEstadioVista.xaml;Vistas\EditarJugadorVista.xaml;Vistas\EditarPartidoVsita.xaml;Vistas\EliminarEquipoVista.xaml;Vistas\EliminarEstadioVista.xaml;Vistas\EliminarJugadorVista.xaml;Vistas\EliminarPartidoVista.xaml;Vistas\EquiposVista.xaml;Vistas\EstadiosVista.xaml;Vistas\JugadoresVista.xaml;Vistas\PartidosVista.xaml;
 

@@ -53,7 +53,7 @@ namespace InfoNBAAdmin.Vistas {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InfoNBAAdmin;V1.0.0.0;component/vistas/eliminarestadiovista.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InfoNBAAdmin;component/vistas/eliminarestadiovista.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Vistas\EliminarEstadioVista.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

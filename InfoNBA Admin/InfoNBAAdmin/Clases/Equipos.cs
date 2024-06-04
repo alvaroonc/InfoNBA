@@ -9,19 +9,18 @@ namespace InfoNBAAdmin.Clases
 {
     class Equipos : ObservableObject
     {
-        private int id;
-        private string nombre;
-        private int campeonatos;
-        private string entrenador;
-        private string fundacion;
-        private string ciudad;
-        private string logo;
-        private string colorPrincipal;
-        private string conferencia;
-        private int victorias;
-        private int derrotas;
-        private Estadios estadio;
-        private string nombreEstadio;
+        public int campeonatos;
+        public string ciudad; 
+        public string colorPrincipal;
+        public string conferencia;
+        public int derrotas;
+        public string entrenador;
+        public string fundacion;
+        public int id;
+        public Estadios idEstadio;
+        public string logo;
+        public string nombre;
+        public int victorias;
 
         public int Id { get { return id; } set { SetProperty(ref id, value); } }
         public string Nombre { get { return nombre; } set { SetProperty(ref nombre, value); } }
@@ -34,8 +33,7 @@ namespace InfoNBAAdmin.Clases
         public string Conferencia { get { return conferencia; } set { SetProperty(ref conferencia, value); } }
         public int Victorias { get { return victorias; } set { SetProperty(ref victorias, value); } }
         public int Derrotas { get { return derrotas; } set { SetProperty(ref derrotas, value); } }
-        public Estadios Estadio { get { return estadio; } set { SetProperty(ref estadio, value); } }
-        public string NombreEstadio { get { return nombreEstadio; } set { SetProperty(ref nombreEstadio, value); } }
+        public Estadios IdEstadio { get { return idEstadio; } set { SetProperty(ref idEstadio, value); } }
 
         public Equipos(int campeonatos, string ciudad, string colorPrincipal, string conferencia, int derrotas, string entrenador, string fundacion, int id, Estadios idEstadio, string logo, string nombre, int victorias)
         {
@@ -50,8 +48,9 @@ namespace InfoNBAAdmin.Clases
             Conferencia = conferencia;
             Victorias = victorias;
             Derrotas = derrotas;
-            Estadio = idEstadio;
-            NombreEstadio = idEstadio.Nombre;
+            IdEstadio = idEstadio;
         }
+
+        public Equipos() { }
     }
 }

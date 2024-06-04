@@ -173,6 +173,38 @@ namespace InfoNBAAdmin.Servicios
             return response;
         }
 
+        public RestResponse DeleteEquipo(int id)
+        {
+            var client = new RestClient("http://localhost:8080/bdinfonba/infonba");
+            var request = new RestRequest($"/equipos/{id}", Method.Delete);
+            var response = client.Execute(request);
+            return response;
+        }
+
+        public RestResponse DeleteEstadio(int id)
+        {
+            var client = new RestClient("http://localhost:8080/bdinfonba/infonba");
+            var request = new RestRequest($"/estadios/{id}", Method.Delete);
+            var response = client.Execute(request);
+            return response;
+        }
+
+        public RestResponse DeleteJugador(int id)
+        {
+            var client = new RestClient("http://localhost:8080/bdinfonba/infonba");
+            var request = new RestRequest($"/jugadores/{id}", Method.Delete);
+            var response = client.Execute(request);
+            return response;
+        }
+
+        public RestResponse DeletePartido(int id)
+        {
+            var client = new RestClient("http://localhost:8080/bdinfonba/infonba");
+            var request = new RestRequest($"/partidos/{id}", Method.Delete);
+            var response = client.Execute(request);
+            return response;
+        }
+
         public ServicioApi() { }
     }
 }
