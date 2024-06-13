@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InfoNBAAdmin.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,22 @@ namespace InfoNBAAdmin.Vistas
     /// <summary>
     /// Lógica de interacción para EliminarEquipoVista.xaml
     /// </summary>
+
+
     public partial class EliminarEquipoVista : Page
     {
+        EliminarEquipoVM vm;
         public EliminarEquipoVista()
         {
             InitializeComponent();
+            vm = new EliminarEquipoVM();
+            this.DataContext = vm;
+        }
+
+        private void EliminarEquipoButtonClick(object sender, RoutedEventArgs e)
+        {
+            vm.EliminarEquipo();
+            MessageBox.Show("Equipo eliminado.");
         }
     }
 }

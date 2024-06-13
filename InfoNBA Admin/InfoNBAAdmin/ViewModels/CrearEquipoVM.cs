@@ -14,9 +14,11 @@ namespace InfoNBAAdmin.ViewModels
     {
         private Equipos equipoNuevo;
         private ObservableCollection<Estadios> listaEstadios;
+        private Estadios estadioSeleccionado;
 
         public Equipos EquipoNuevo { get { return equipoNuevo; } set { SetProperty(ref equipoNuevo, value); } }
         public ObservableCollection<Estadios> ListaEstadios {  get { return listaEstadios; } set { SetProperty(ref listaEstadios, value); } }
+        public Estadios EstadioSeleccionado { get { return estadioSeleccionado; } set { SetProperty(ref estadioSeleccionado, value); } }
 
         private ServicioApi api;
 

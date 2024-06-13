@@ -26,7 +26,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35">
             <TextBlock Text="Id equipo " VerticalAlignment="Center"/>
-            <ComboBox />
+            <ComboBox x:Name="EquiposComboBox"  Width="100" ItemsSource="{Binding Path=ListaEquipos}" DisplayMemberPath="Nombre" SelectedItem="{Binding Path=EquipoSeleccionado, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Nombre " VerticalAlignment="Center"/>
@@ -70,7 +70,7 @@
         </StackPanel>
         <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35">
             <TextBlock Text="Estadio " VerticalAlignment="Center"/>
-            <ComboBox />
+            <ComboBox x:Name="EstadiosComboBox"  Width="100" ItemsSource="{Binding Path=ListaEstadios}" DisplayMemberPath="Nombre" SelectedItem="{Binding Path=EstadioSeleccionado, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <Button Grid.Row="7" Grid.ColumnSpan="2" Content="Editar Equipo" HorizontalAlignment="Center" Width="200" Margin="10"/>
     </Grid>

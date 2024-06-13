@@ -7,50 +7,79 @@ using System.Threading.Tasks;
 
 namespace InfoNBAAdmin.Clases
 {
+    using Newtonsoft.Json;
+
     class Equipos : ObservableObject
     {
-        public int campeonatos;
-        public string ciudad; 
-        public string colorPrincipal;
-        public string conferencia;
-        public int derrotas;
-        public string entrenador;
-        public string fundacion;
-        public int id;
-        public Estadios idEstadio;
-        public string logo;
-        public string nombre;
-        public int victorias;
+        private int campeonatos;
+        private string ciudad;
+        private string colorPrincipal;
+        private string conferencia;
+        private int derrotas;
+        private string entrenador;
+        private string fundacion;
+        private int id;
+        private Estadios idEstadio;
+        private string logo;
+        private string nombre;
+        private int victorias;
 
-        public int Id { get { return id; } set { SetProperty(ref id, value); } }
-        public string Nombre { get { return nombre; } set { SetProperty(ref nombre, value); } }
+        [JsonProperty("campeonatos")]
         public int Campeonatos { get { return campeonatos; } set { SetProperty(ref campeonatos, value); } }
-        public string Entrenador { get { return entrenador; } set { SetProperty(ref entrenador, value); } }
-        public string Fundacion { get { return fundacion; } set { SetProperty(ref fundacion, value); } }
+
+        [JsonProperty("ciudad")]
         public string Ciudad { get { return ciudad; } set { SetProperty(ref ciudad, value); } }
-        public string Logo { get { return logo; } set { SetProperty(ref logo, value); } }
+
+        [JsonProperty("colorPrincipal")]
         public string ColorPrincipal { get { return colorPrincipal; } set { SetProperty(ref colorPrincipal, value); } }
+
+        [JsonProperty("conferencia")]
         public string Conferencia { get { return conferencia; } set { SetProperty(ref conferencia, value); } }
-        public int Victorias { get { return victorias; } set { SetProperty(ref victorias, value); } }
+
+        [JsonProperty("derrotas")]
         public int Derrotas { get { return derrotas; } set { SetProperty(ref derrotas, value); } }
+
+        [JsonProperty("entrenador")]
+        public string Entrenador { get { return entrenador; } set { SetProperty(ref entrenador, value); } }
+
+        [JsonProperty("fundacion")]
+        public string Fundacion { get { return fundacion; } set { SetProperty(ref fundacion, value); } }
+
+        [JsonProperty("id")]
+        public int Id { get { return id; } set { SetProperty(ref id, value); } }
+
+        [JsonProperty("idEstadio")]
         public Estadios IdEstadio { get { return idEstadio; } set { SetProperty(ref idEstadio, value); } }
+
+        [JsonProperty("logo")]
+        public string Logo { get { return logo; } set { SetProperty(ref logo, value); } }
+
+        [JsonProperty("nombre")]
+        public string Nombre { get { return nombre; } set { SetProperty(ref nombre, value); } }
+
+        [JsonProperty("victorias")]
+        public int Victorias { get { return victorias; } set { SetProperty(ref victorias, value); } }
 
         public Equipos(int campeonatos, string ciudad, string colorPrincipal, string conferencia, int derrotas, string entrenador, string fundacion, int id, Estadios idEstadio, string logo, string nombre, int victorias)
         {
-            Id = id;
-            Nombre = nombre;
             Campeonatos = campeonatos;
-            Entrenador = entrenador;
-            Fundacion = fundacion;
             Ciudad = ciudad;
-            Logo = logo;
             ColorPrincipal = colorPrincipal;
             Conferencia = conferencia;
-            Victorias = victorias;
             Derrotas = derrotas;
+            Entrenador = entrenador;
+            Fundacion = fundacion;
+            Id = id;
             IdEstadio = idEstadio;
+            Logo = logo;
+            Nombre = nombre;
+            Victorias = victorias;
         }
 
         public Equipos() { }
     }
+
+
+
+
 }
