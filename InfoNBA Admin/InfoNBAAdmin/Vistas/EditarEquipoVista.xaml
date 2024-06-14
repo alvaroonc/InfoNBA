@@ -30,48 +30,48 @@
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Nombre " VerticalAlignment="Center"/>
-            <TextBox x:Name="NombreTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="NombreTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EquipoSeleccionado.Nombre}"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Campeonatos " VerticalAlignment="Center"/>
-            <TextBox x:Name="CampeonatosTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="CampeonatosTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EquipoSeleccionado.Campeonatos, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Entrenador " VerticalAlignment="Center"/>
-            <TextBox x:Name="EntrenadorTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="EntrenadorTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EquipoSeleccionado.Entrenador, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Fundacion " VerticalAlignment="Center"/>
-            <TextBox x:Name="FundacionTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="FundacionTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EquipoSeleccionado.Fundacion, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Ciudad " VerticalAlignment="Center"/>
-            <TextBox x:Name="CiudadTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="CiudadTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EquipoSeleccionado.Ciudad, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Logo " VerticalAlignment="Center"/>
-            <TextBox x:Name="LogoTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="LogoTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EquipoSeleccionado.Logo, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Color principal " VerticalAlignment="Center"/>
-            <TextBox x:Name="ColorPrincipalTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="ColorPrincipalTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EquipoSeleccionado.ColorPrincipal, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Conferencia " VerticalAlignment="Center"/>
-            <TextBox x:Name="ConferenciaTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="ConferenciaTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EquipoSeleccionado.Conferencia, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="5" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Victorias " VerticalAlignment="Center"/>
-            <TextBox x:Name="VictoriasTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="VictoriasTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EquipoSeleccionado.Victorias, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Derrotas " VerticalAlignment="Center"/>
-            <TextBox x:Name="DerrotasTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="DerrotasTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EquipoSeleccionado.Derrotas, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35">
             <TextBlock Text="Estadio " VerticalAlignment="Center"/>
             <ComboBox x:Name="EstadiosComboBox"  Width="100" ItemsSource="{Binding Path=ListaEstadios}" DisplayMemberPath="Nombre" SelectedItem="{Binding Path=EstadioSeleccionado, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
-        <Button Grid.Row="7" Grid.ColumnSpan="2" Content="Editar Equipo" HorizontalAlignment="Center" Width="200" Margin="10"/>
+        <Button x:Name="EditarEquipoButton" Grid.Row="7" Grid.ColumnSpan="2" Content="Editar Equipo" HorizontalAlignment="Center" Width="200" Margin="10" Click="EditarEquipoButtonClick"/>
     </Grid>
 </Page>

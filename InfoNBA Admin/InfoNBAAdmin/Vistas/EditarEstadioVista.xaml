@@ -21,24 +21,24 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35">
             <TextBlock Text="Id estadio " VerticalAlignment="Center"/>
-            <ComboBox />
+            <ComboBox x:Name="EstadiosComboBox" Width="200" ItemsSource="{Binding Path=ListaEstadios}" DisplayMemberPath="Nombre" SelectedItem="{Binding Path=EstadioSeleccionado, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Nombre " VerticalAlignment="Center"/>
-            <TextBox x:Name="NombreTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="NombreTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EstadioSeleccionado.Nombre}"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Capacidad " VerticalAlignment="Center"/>
-            <TextBox x:Name="CapacidadTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="CapacidadTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EstadioSeleccionado.Capacidad, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Ciudad " VerticalAlignment="Center"/>
-            <TextBox x:Name="CiudadTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="CiudadTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EstadioSeleccionado.Ciudad, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Imagen " VerticalAlignment="Center"/>
-            <TextBox x:Name="ImagenTextBox" Height="25" Width="150" Margin="10"/>
+            <TextBox x:Name="ImagenTextBox" Height="25" Width="150" Margin="10" Text="{Binding Path=EstadioSeleccionado.Imagen, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
-        <Button Grid.Row="3" Grid.ColumnSpan="2" Content="Editar Estadio" HorizontalAlignment="Center" Width="200" Height="75" Margin="10"/>
+        <Button x:Name="EditarEstadioButton"  Grid.Row="3" Grid.ColumnSpan="2" Content="Editar Estadio" HorizontalAlignment="Center" Width="200" Height="75" Margin="10" Click="EditarEstadioButtonClick"/>
     </Grid>
 </Page>

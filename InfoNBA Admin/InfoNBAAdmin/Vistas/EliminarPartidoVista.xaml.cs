@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InfoNBAAdmin.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,18 @@ namespace InfoNBAAdmin.Vistas
     /// </summary>
     public partial class EliminarPartidoVista : Page
     {
+        EliminarPartidoVM vm;
         public EliminarPartidoVista()
         {
             InitializeComponent();
+            vm = new EliminarPartidoVM();
+            this.DataContext = vm;
+        }
+
+        private void EliminarPartidoButtonClick(object sender, RoutedEventArgs e)
+        {
+            vm.EliminarPartido();
+            MessageBox.Show("Partido eliminado");
         }
     }
 }

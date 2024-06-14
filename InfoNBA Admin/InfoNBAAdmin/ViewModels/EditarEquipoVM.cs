@@ -31,6 +31,7 @@ namespace InfoNBAAdmin.ViewModels
             api = new ServicioApi();
             ListaEquipos = api.GetEquipos();
             ListaEstadios = api.GetEstadios();
+            EquipoEditar = new Equipos();
         }
 
         public void EditarEquipo()

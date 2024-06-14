@@ -34,6 +34,6 @@
             <TextBlock Text="Imagen " VerticalAlignment="Center"/>
             <TextBox x:Name="ImagenTextBox" Height="25" Width="150" Margin="10"/>
         </StackPanel>
-        <Button Grid.Row="2" Grid.ColumnSpan="2" Content="Crear Estadio" HorizontalAlignment="Center" Width="200" Height="75" Margin="10"/>
+        <Button x:Name="CrearEstadioButton"  Grid.Row="2" Grid.ColumnSpan="2" Content="Crear Estadio" HorizontalAlignment="Center" Width="200" Height="75" Margin="10" Click="CrearEstadioButtonClick"/>
     </Grid>
 </Page>

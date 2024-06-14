@@ -206,5 +206,7 @@ namespace InfoNBAAdmin.Servicios
         }
 
         public ServicioApi() { }
+
+        
     }
 }

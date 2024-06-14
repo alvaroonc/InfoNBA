@@ -63,5 +63,6 @@ namespace InfoNBAAdmin.Clases
             Asistencias = asistencias;
             Rebotes = rebotes;
         }
+        public Jugadores() { }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InfoNBAAdmin.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,23 @@ namespace InfoNBAAdmin.Vistas
     /// </summary>
     public partial class EditarEstadioVista : Page
     {
+        EditarEstadioVM vm;
         public EditarEstadioVista()
         {
             InitializeComponent();
+            vm = new EditarEstadioVM();
+            this.DataContext = vm;
+        }
+
+        private void EditarEstadioButtonClick(object sender, RoutedEventArgs e)
+        {
+            vm.EstadioNuevo = vm.EstadioSeleccionado;
+            vm.EstadioNuevo.Nombre = NombreTextBox.Text;
+
+            vm.EditarEstadio();
+            MessageBox.Show("Estadio " + vm.EstadioNuevo.Nombre + " editado");
+
+            EstadiosComboBox.SelectedItem = null;
         }
     }
 }

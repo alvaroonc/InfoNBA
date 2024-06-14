@@ -22,7 +22,7 @@ CREATE TABLE equipos (
   victorias integer,
   derrotas integer,
   id_estadio integer,
-  FOREIGN KEY (id_estadio) REFERENCES estadios(id)
+  FOREIGN KEY (id_estadio) REFERENCES estadios(id) ON DELETE CASCADE
 );
 
 CREATE TABLE jugadores (
@@ -48,9 +48,9 @@ CREATE TABLE partidos (
   id_estadio integer,
   puntos_local integer,
   puntos_visitante integer,
-  FOREIGN KEY (id_equipo_local) REFERENCES equipos(id),
-  FOREIGN KEY (id_equipo_visitante) REFERENCES equipos(id),
-  FOREIGN KEY (id_estadio) REFERENCES estadios(id)
+  FOREIGN KEY (id_equipo_local) REFERENCES equipos(id) ON DELETE CASCADE,
+  FOREIGN KEY (id_equipo_visitante) REFERENCES equipos(id) ON DELETE CASCADE,
+  FOREIGN KEY (id_estadio) REFERENCES estadios(id) ON DELETE CASCADE
 );
 
 INSERT INTO estadios VALUES 

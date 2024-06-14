@@ -65,8 +65,8 @@
         </StackPanel>
         <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35">
             <TextBlock Text="Equipo " VerticalAlignment="Center"/>
-            <ComboBox />
+            <ComboBox x:Name="EquiposComboBox"  Width="100" ItemsSource="{Binding Path=ListaEquipos}" DisplayMemberPath="Nombre" SelectedItem="{Binding Path=EquipoSeleccionado, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
-        <Button Grid.Row="6" Grid.ColumnSpan="2" Content="Crear Jugador" HorizontalAlignment="Center" Width="200" Margin="10"/>
+        <Button x:Name="CrearJugadorButton" Grid.Row="6" Grid.ColumnSpan="2" Content="Crear Jugador" HorizontalAlignment="Center" Width="200" Margin="10" Click="CrearJugadorButtonClick"/>
     </Grid>
 </Page>

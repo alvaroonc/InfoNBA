@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InfoNBAAdmin.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,18 @@ namespace InfoNBAAdmin.Vistas
     /// </summary>
     public partial class EliminarEstadioVista : Page
     {
+        EliminarEstadioVM vm;
         public EliminarEstadioVista()
         {
             InitializeComponent();
+            vm = new EliminarEstadioVM();
+            this.DataContext = vm;
+        }
+
+        private void EliminarEstadioButtonClick(object sender, RoutedEventArgs e)
+        {
+            vm.EliminarEstadio();
+            MessageBox.Show("Estadio eliminado");
         }
     }
 }
