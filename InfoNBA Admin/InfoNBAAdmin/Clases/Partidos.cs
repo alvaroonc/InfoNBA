@@ -39,5 +39,7 @@ namespace InfoNBAAdmin.Clases
             PuntosLocal = puntosLocal;
             PuntosVisitante = puntosVisitante;
         }
+
+        public Partidos() { }
     }
 }
