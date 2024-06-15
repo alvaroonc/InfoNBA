@@ -1,0 +1,155 @@
+﻿<Window x:Class="InfoNBA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InfoNBA"
+        mc:Ignorable="d"        
+        Title="" MinWidth="1500" MinHeight="800"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style x:Key="RadioButtonStyle" TargetType="RadioButton">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Medium" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border x:Name="menuButton"
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Width="300">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25*" />
+                                    <ColumnDefinition Width="127*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border x:Name="btnSelected"
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                    CornerRadius="10"/>
+
+                                <Rectangle Name="Indicator"
+                                    RadiusX="3" 
+                                    RadiusY="3" 
+                                    Width="10" 
+                                    HorizontalAlignment="Left">
+                                    <Rectangle.BitmapEffect>
+                                        <DropShadowBitmapEffect
+                                            ShadowDepth="3"
+                                            Direction="0"
+                                            Color="#1d428a"
+                                            Softness="0.6"/>
+                                    </Rectangle.BitmapEffect>
+                                </Rectangle>
+
+                                <TextBlock x:Name="txtName" Margin="72,9,59,9"
+                                   Grid.Column="1" Text="{TemplateBinding Content}"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   FontWeight="{TemplateBinding FontWeight}"
+                                   FontSize="{TemplateBinding FontSize}"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="txtName" Property="Foreground" Value="white"/>
+                                <Setter TargetName="btnSelected" Property="Background" Value="#1d428a"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="Indicator" Property="Fill" Value="#ffffff"/>
+                                <Setter TargetName="btnSelected" Property="Background" Value="#1d428a"/>
+                                <Setter TargetName="txtName" Property="Foreground" Value="white"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <ControlTemplate x:Key="ButtonTemplate1" TargetType="{x:Type ButtonBase}">
+            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsDefaulted" Value="true">
+                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                    <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="Black">
+            <StackPanel Margin="10" Orientation="Vertical">
+
+                <Button Template="{DynamicResource ButtonTemplate1}" x:Name="InfoNBAButton" Background="Transparent" BorderBrush="Transparent" Click="InfoNBAButtonClick">
+                    <TextBlock FontSize="50" FontWeight="Bold" Margin="10" HorizontalAlignment="Center">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#1d428a" Offset="0"/>
+                                <GradientStop Color="#c8102e" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                        InfoNBA
+                    </TextBlock>
+                </Button>
+
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <RadioButton x:Name="EquiposRadio" Content="Equipos" Click="EquiposRadioClick" Style="{StaticResource RadioButtonStyle}"/>
+                    <RadioButton x:Name="JugadoresRadio" Content="Jugadores" Click="JugadoresRadioClick" Style="{StaticResource RadioButtonStyle}"/>
+                    <RadioButton x:Name="PartidosRadio" Content="Partidos" Click="PartidosRadioClick" Style="{StaticResource RadioButtonStyle}"/>
+                    <RadioButton x:Name="EstadiosRadio" Content="Estadios" Click="EstadiosRadioClick" Style="{StaticResource RadioButtonStyle}"/>
+                    <RadioButton x:Name="ClasificacionRadio" Content="Clasificación" Style="{StaticResource RadioButtonStyle}" Click="ClasificacionRadioClick" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+
+        <Grid Grid.Column="1" >
+            <Grid.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#1d428a" Offset="0"/>
+                    <GradientStop Color="#c8102e" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Frame x:Name="frameContent" Margin="25" NavigationUIVisibility="Hidden"/>
+        </Grid>
+    </Grid>
+</Window>

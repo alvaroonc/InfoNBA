@@ -1,0 +1,102 @@
+﻿<Page x:Class="InfoNBA.Vistas.ClasificacionVista"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InfoNBA.Vistas"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="ClasificacionVista">
+
+    <Border CornerRadius="8" Background="White">
+        <Grid Margin="10">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <StackPanel HorizontalAlignment="Center" Width="900">
+                        <TextBlock Text="ESTE" HorizontalAlignment="Center" Foreground="#1d428a" FontWeight="Bold" FontSize="40"/>
+
+                        <Border Margin="5" BorderThickness="2" CornerRadius="3">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#1d428a" Offset="0"/>
+                                    <GradientStop Color="#c8102e" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <StackPanel Orientation="Vertical">
+                                <Grid Height="40" Background="LightGray">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.3*"/>
+                                        <ColumnDefinition Width="0.3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="Equipo" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    <TextBlock Grid.Column="1" Text="Victorias" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    <TextBlock Grid.Column="2" Text="Derrotas" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                                <ItemsControl ItemsSource="{Binding Path=ClasificacionEste}" Margin="5">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Height="30">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.3*"/>
+                                                    <ColumnDefinition Width="0.3*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Column="0" Text="{Binding Path=Nombre}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+                                                <TextBlock Grid.Column="1" Text="{Binding Path=Victorias}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                <TextBlock Grid.Column="2" Text="{Binding Path=Derrotas}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </Border>
+
+                    </StackPanel>
+                    <Separator Height="30" Background="Transparent"/>
+                    <StackPanel HorizontalAlignment="Center" Width="900">
+                        <TextBlock Text="OESTE" HorizontalAlignment="Center" Foreground="#c8102e" FontWeight="Bold" FontSize="40"/>
+
+                        <Border Margin="5" BorderThickness="2" CornerRadius="3">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#1d428a" Offset="0"/>
+                                    <GradientStop Color="#c8102e" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <StackPanel Orientation="Vertical">
+                                <Grid Height="40" Background="LightGray">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.3*"/>
+                                        <ColumnDefinition Width="0.3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="Equipo" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    <TextBlock Grid.Column="1" Text="Victorias" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    <TextBlock Grid.Column="2" Text="Derrotas" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                                <ItemsControl ItemsSource="{Binding Path=ClasificacionOeste}" Margin="5">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Height="30">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="0.3*"/>
+                                                    <ColumnDefinition Width="0.3*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Column="0" Text="{Binding Path=Nombre}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+                                                <TextBlock Grid.Column="1" Text="{Binding Path=Victorias}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                <TextBlock Grid.Column="2" Text="{Binding Path=Derrotas}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </Border>
+
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</Page>
