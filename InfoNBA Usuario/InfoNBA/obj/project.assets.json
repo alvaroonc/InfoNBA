@@ -334,11 +334,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Álvaro\\source\\repos\\InfoNBA\\InfoNBA.csproj",
+      "projectUniqueName": "C:\\Users\\Álvaro\\OneDrive\\Documents\\GitHUb\\InfoNBA\\InfoNBA\\InfoNBA Usuario\\InfoNBA\\InfoNBA.csproj",
       "projectName": "InfoNBA",
-      "projectPath": "C:\\Users\\Álvaro\\source\\repos\\InfoNBA\\InfoNBA.csproj",
+      "projectPath": "C:\\Users\\Álvaro\\OneDrive\\Documents\\GitHUb\\InfoNBA\\InfoNBA\\InfoNBA Usuario\\InfoNBA\\InfoNBA.csproj",
       "packagesPath": "C:\\Users\\Álvaro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Álvaro\\source\\repos\\InfoNBA\\obj\\",
+      "outputPath": "C:\\Users\\Álvaro\\OneDrive\\Documents\\GitHUb\\InfoNBA\\InfoNBA\\InfoNBA Usuario\\InfoNBA\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

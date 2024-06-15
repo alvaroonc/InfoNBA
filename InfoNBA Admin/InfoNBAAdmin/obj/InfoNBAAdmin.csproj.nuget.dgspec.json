@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Álvaro\\OneDrive\\Documents\\InfoNBAAdmin\\InfoNBAAdmin.csproj": {}
+    "C:\\Users\\Álvaro\\OneDrive\\Documents\\GitHUb\\InfoNBA\\InfoNBA\\InfoNBA Admin\\InfoNBAAdmin\\InfoNBAAdmin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Álvaro\\OneDrive\\Documents\\InfoNBAAdmin\\InfoNBAAdmin.csproj": {
+    "C:\\Users\\Álvaro\\OneDrive\\Documents\\GitHUb\\InfoNBA\\InfoNBA\\InfoNBA Admin\\InfoNBAAdmin\\InfoNBAAdmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Álvaro\\OneDrive\\Documents\\InfoNBAAdmin\\InfoNBAAdmin.csproj",
+        "projectUniqueName": "C:\\Users\\Álvaro\\OneDrive\\Documents\\GitHUb\\InfoNBA\\InfoNBA\\InfoNBA Admin\\InfoNBAAdmin\\InfoNBAAdmin.csproj",
         "projectName": "InfoNBAAdmin",
-        "projectPath": "C:\\Users\\Álvaro\\OneDrive\\Documents\\InfoNBAAdmin\\InfoNBAAdmin.csproj",
+        "projectPath": "C:\\Users\\Álvaro\\OneDrive\\Documents\\GitHUb\\InfoNBA\\InfoNBA\\InfoNBA Admin\\InfoNBAAdmin\\InfoNBAAdmin.csproj",
         "packagesPath": "C:\\Users\\Álvaro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Álvaro\\OneDrive\\Documents\\InfoNBAAdmin\\obj\\",
+        "outputPath": "C:\\Users\\Álvaro\\OneDrive\\Documents\\GitHUb\\InfoNBA\\InfoNBA\\InfoNBA Admin\\InfoNBAAdmin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

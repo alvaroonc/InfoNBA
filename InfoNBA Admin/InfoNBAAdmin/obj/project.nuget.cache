@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FZfpE2W+RVr0FLAYyk6s42TQ7CBY8xNDyeCacWF7hj/nuQ5IJR75Z3dKq0+KzH4YqHhCqhp50Vr2zikgCSxsIQ==",
+  "dgSpecHash": "udqyQoOQowK1jC327q/I06iO2KS3Isp7QUV34Tjc2nyyTd0ymZvYgqE2CfEyTOEaO63j7CW+V+Lqo2gYKfsWSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Álvaro\\OneDrive\\Documents\\InfoNBAAdmin\\InfoNBAAdmin.csproj",
+  "projectFilePath": "C:\\Users\\Álvaro\\OneDrive\\Documents\\GitHUb\\InfoNBA\\InfoNBA\\InfoNBA Admin\\InfoNBAAdmin\\InfoNBAAdmin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Álvaro\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
     "C:\\Users\\Álvaro\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
